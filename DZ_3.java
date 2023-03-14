@@ -9,9 +9,11 @@ public class DZ_3 {
         chet(integers);
         System.out.println(integers);
         
-        ArrayList<String> lst = new ArrayList<>(List.of("string", "s", "5", "10", "-12", "my_value"));
-
-
+        ArrayList<String> lst = new ArrayList<>(List.of("string", "s", "5", "56", "-12", "654", "my_value"));
+        System.out.println(lst);
+        cler(lst);
+        System.out.println(lst);
+        
     }
 
     // 1. Дан список ArrayList<Integer> целых чисел. Удалить из него нечетные числа. 
@@ -26,13 +28,18 @@ public class DZ_3 {
         }
     }
 
-    // 2. Дан список ArrayList<String>. Удалить из него все строки, которые являются числами Пример:
-    // ArrayList<String> list = new ArrayList<>(List.of("string", "s", "5", "10", "-12", "my_value")); ["string", "s", "my_value"]
+    //2. Дан список ArrayList<String>. Удалить из него все строки, которые являются числами Пример:
+    //ArrayList<String> list = new ArrayList<>(List.of("string", "s", "5", "10", "-12", "my_value")); ["string", "s", "my_value"]
     
     private static void cler(List<String> arr1){
         int i = 0;
-        while(i < arr.size()){
-            if(arr.get(i) )
+        while(i < arr1.size()){
+            try {
+                Integer.parseInt(arr1.get(i));
+                arr1.remove(i);  
+            } catch (NumberFormatException e) { 
+                i++; 
+            } 
         }
     }
 }
