@@ -6,6 +6,7 @@ public class practicum {
         int val = 5;
         swap(array, val);
         System.out.println(Arrays.toString(array));
+        Object o = 1; GetType(o);
         
         
     }
